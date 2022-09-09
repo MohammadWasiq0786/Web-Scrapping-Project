@@ -1,0 +1,38 @@
+1. For deployment we need to download heroku cli first from this link https://devcenter.heroku.com/articles/heroku-cli
+
+2. After installation will check heroku is installed in our system do open 'Anaconda prompt' or 'Terminal' and just type 'heroku' in there for confirmation.
+
+3. Then we need to create account in heroku, type 'heroku login' in Anaconda prompt or in your terminal. You'll get an option like below:
+    heroku: Press any key to open up the browser to login or q to exit
+	
+	press any key, then it redirect you to your browser. In the browser, if you haven't created account in heroku, create that first. You' have to verify from your mail-id, if its done
+	then again type 'heroku login' in Anaconda prompt or in your terminal. Then again it redirect you to browser with the message 'Logged in'.
+	
+3.  After this 'Logged in' message, open a new tab and go to this link 'https://dashboard.heroku.com/apps'. On the right hand side you'll get 'New' button for creating new app.
+     select new app.
+	 
+	 Add your app name in their like 'review ineuron' and keep the region as 'United states' . Then hit create app. Now you'll get the commands how to deploy your app in heroku.
+	 
+4. Create new env with this command 'conda create -n test python=3.7'
+
+5. Now we can see in the page first two steps we have done already, we installed heroku cli and created our accounts also. Now moving on to third step.
+    
+	a). First move our path where our project is available. like my project is in reviewFlask folder then i write below command in terminal.
+	     cd /Desktop/rev/HerokuFlaskDemo/reviewFlask
+		 
+	b} Now we initialize our git with this command 'git init'
+	c). Then we check the status of git with this command 'git status'. to check the status of the git.
+	d). Then type this command for add our heroku app repository, 'heroku git:remote -a rev-ineuron'.
+	e). Now we're adding our local files in git with this command 'git add .' (i.e we have a dot after git add, don't forget to add dot in that command)
+    f)  Now we commit our repository from this command, git commit -am "first-commit"
+	
+	Note: If we get any message like to add 'git config --global user.email "someexample@mail.com" and git config --global user.name "username".
+	         Then we need to add our github mail-id like this 'git config --global user.email "ramkumar@gmail.com" and then add github username too like below command
+			  
+			  git config --global user.name "ram123"
+			  
+6. Then We push our code in heroku with this command  'git push heroku master', it'll get deployed in heroku( it'll take some time in deployment).
+
+7. After deployment is done. We get a deployed link at bottom, we just need to copy that link and paste in browser.
+  
+  
